@@ -1,9 +1,9 @@
-var totalBuses = 10;
-var busCounter = 1;
-var workingBuses = 7;
-for (busCounter; busCounter <= workingBuses; busCounter++) {
-  console.log(busCounter + '. busz üzemkész, soförre vár.')
+var totalDwarf = 10;
+var dwarfCounter = 1;
+var workingDwarfs = 7;
+for (dwarfCounter; dwarfCounter <= workingDwarfs; dwarfCounter++) {
+  console.log(dwarfCounter + '. törpe a bányában van.')
 }
-for (busCounter; busCounter <= totalBuses; busCounter++) {
-  console.log(busCounter + '. busz üzemen kívül van, szervizre vár.')
+for (dwarfCounter; dwarfCounter <= totalDwarf; dwarfCounter++) {
+  console.log(dwarfCounter + '. törpe még az ágyában alszik.')
 }
