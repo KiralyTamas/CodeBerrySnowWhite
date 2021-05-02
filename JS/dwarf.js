@@ -1,4 +1,4 @@
-var totalDwarf = 20;
+var totalDwarf = 10;
 var dwarfCounter = 1;
 var workingDwarfs = 7;
 function click() {
