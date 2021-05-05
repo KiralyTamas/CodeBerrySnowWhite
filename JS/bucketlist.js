@@ -3,4 +3,3 @@ bucketList.push('megnézni a sarki fényt','megtanulni gitározni','ejtőernyőz
 bucketList.unshift('vegetáriánussá válni','legalább 3 hónapra Franciaországba költözni')
 bucketList.pop()
 bucketList.shift()
-console.log(bucketList)
