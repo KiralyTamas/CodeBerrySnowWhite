@@ -12,7 +12,7 @@ let booksToRead=['Svejk, a derék katona','Jane Eyre','A Gyűrű Szövetsége','
 shoppingList.push('rizs', 'tészta', 'bab')
 shoppingList.unshift('csoki')
 myFavoriteMovies.push('Naruto')
-placesToVisit.push('Grönland', 'Nagy-Britannia', 'Norvágia')
+placesToVisit.push('Grönland', 'Nagy-Britannia', 'Norvégia')
 myFrieds.unshift('Laci', 'Jani', 'Tomi')
 shoppingList.push('tea')
 shoppingList.pop()
