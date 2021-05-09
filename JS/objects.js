@@ -4,7 +4,12 @@ let myFilm = {
   'genre': 'scifi',
   'has been see': true,
   'year of publication': 2008,
-  'caracters': ['Netiri', 'Jack', 'Toruk Makto']
+  'main caracters': ['Netiri', 'Jack', 'Toruk Makto'],
+  'quotes': {
+    'Netiri':'Látlak téged',
+    'Jack':'Egy vagyok közületek',
+    'Toruk Makto':'Repülj velem testvérem'
+  }
 }
 let myFavourites = {
   'szín': 'Kék',
