@@ -43,7 +43,7 @@ let apartment = {
   'pets allowed': ['kutyák', 'macskák'],
   'shortest rental period': 'legalább egy év'
 }
-let myBook = {
+let myBook1 = {
   'title': 'To Kill a Mockingbird',
   'author': 'Harper Lee',
   'genre': 'coming-of-age story',
@@ -56,17 +56,19 @@ let myBook = {
     'p309': '"An\' they chased him \'n\' never could catch him \'cause they didn\'t know what he looked like, an\' Atticus, when they finally saw him, why he hadn\'t done any of those things... Atticus, he was real nice..." His hands were under my chin, pulling up the cover, tucking it around me. "Most people are, Scout, when you finally see them."'
   },
   'borrowed by': null,
+  'rating': 5,
   'page marker': function () {
-    var previousPage = myBook.page;
-    myBook.page = prompt('Melyik oldalon tartasz?')
+    var previousPage = this.page;
+    this.page = prompt('Melyik oldalon tartasz az alábbi könyvben:' + this.title + '?')
     if (typeof previousPage === 'undefined') {
-      alert('Jelenleg az alábbi oldalon tartasz: ' + myBook.page + ' az alábbi könyvedben: ' + myBook.title + '.')
+      alert('Jelenleg az alábbi oldalon tartasz: ' + this.page + ' az alábbi könyvedben: ' + this.title + '.')
+    } else if (previousPage > this.page) {
+      alert('Legutóbb a ' + previousPage + '. oldalon hagytad abba az olvasást, most pedig a ' + this.page + ' oldalon tartasz? Valami itt nem kerek :)')
     } else {
-      alert('Jelenleg az alábbi oldalon tartasz: ' + myBook.page + ' az alábbi könyvedben: ' + myBook.title + '. Legutóbb az alábbi oldalon tartottál: ' + previousPage + ', így ez alkalommal ' + (myBook.page - previousPage) + ' oldalt olvastál.')
+      alert('Jelenleg az alábbi oldalon tartasz: ' + this.page + ' az alábbi könyvedben: ' + this.title + '. Legutóbb az alábbi oldalon tartottál: ' + previousPage + ', így ez alkalommal ' + (this.page - previousPage) + ' oldalt olvastál.')
     }
-  },
-};
-myBook.rating = 5;
+  }
+}
 var leonardoDiCaprio = {
   'born': 1974,
   'birth name': 'Leonardo Wilhelm DiCaprio',
@@ -89,3 +91,55 @@ var odometer = {
     console.log('A különbség az ' + odometer.initialValue + ' és ' + odometer.finalValue + ' között ' + (odometer.finalValue - odometer.initialValue) + '.');
   }
 };
+let myBook2 = {
+  'title': 'To Kill a Mockingbird',
+  'author': 'Harper Lee',
+  'genre': 'coming-of-age story',
+  'year of publication': 2015,
+  'has been read': true,
+  'main characters': ['Jean Louise Finch', 'Jeremy Finch', 'Atticus Finch'],
+  'quotes': {
+    'p116': '"Atticus, you must be wrong..." "How\'s that?" "Well, most folks seem to think they\'re right and you\'re wrong..." "They\'re certainly entitled to think that, and they\'re entitled to full respect for their opinions," said Atticus, "but before I can live with other folks I\'ve got to live with myself. The one thing that doesn\'t abide by majority rule is a person\'s conscience."',
+    'p124': 'I wanted you to see something about her—I wanted you to see what real courage is, instead of getting the idea that courage is a man with a gun in his hand. It\'s when you know you\'re licked before you begin but you begin anyway and you see it through no matter what. You rarely win, but sometimes you do.',
+    'p309': '"An\' they chased him \'n\' never could catch him \'cause they didn\'t know what he looked like, an\' Atticus, when they finally saw him, why he hadn\'t done any of those things... Atticus, he was real nice..." His hands were under my chin, pulling up the cover, tucking it around me. "Most people are, Scout, when you finally see them."'
+  },
+  'borrowed by': null,
+  'rating': 5,
+  'page marker': function () {
+    var previousPage = this.page;
+    this.page = prompt('Melyik oldalon tartasz az alábbi könyvben:' + this.title + '?')
+    if (typeof previousPage === 'undefined') {
+      alert('Jelenleg az alábbi oldalon tartasz: ' + this.page + ' az alábbi könyvedben: ' + this.title + '.')
+    } else if (previousPage > this.page) {
+      alert('Legutóbb a ' + previousPage + '. oldalon hagytad abba az olvasást, most pedig a ' + this.page + ' oldalon tartasz? Valami itt nem kerek :)')
+    } else {
+      alert('Jelenleg az alábbi oldalon tartasz: ' + this.page + ' az alábbi könyvedben: ' + this.title + '. Legutóbb az alábbi oldalon tartottál: ' + previousPage + ', így ez alkalommal ' + (this.page - previousPage) + ' oldalt olvastál.')
+    }
+  }
+}
+let myBook3 = {
+  'title': 'To Kill a Mockingbird',
+  'author': 'Harper Lee',
+  'genre': 'coming-of-age story',
+  'year of publication': 2015,
+  'has been read': true,
+  'main characters': ['Jean Louise Finch', 'Jeremy Finch', 'Atticus Finch'],
+  'quotes': {
+    'p116': '"Atticus, you must be wrong..." "How\'s that?" "Well, most folks seem to think they\'re right and you\'re wrong..." "They\'re certainly entitled to think that, and they\'re entitled to full respect for their opinions," said Atticus, "but before I can live with other folks I\'ve got to live with myself. The one thing that doesn\'t abide by majority rule is a person\'s conscience."',
+    'p124': 'I wanted you to see something about her—I wanted you to see what real courage is, instead of getting the idea that courage is a man with a gun in his hand. It\'s when you know you\'re licked before you begin but you begin anyway and you see it through no matter what. You rarely win, but sometimes you do.',
+    'p309': '"An\' they chased him \'n\' never could catch him \'cause they didn\'t know what he looked like, an\' Atticus, when they finally saw him, why he hadn\'t done any of those things... Atticus, he was real nice..." His hands were under my chin, pulling up the cover, tucking it around me. "Most people are, Scout, when you finally see them."'
+  },
+  'borrowed by': null,
+  'rating': 5,
+  'page marker': function () {
+    var previousPage = this.page;
+    this.page = prompt('Melyik oldalon tartasz az alábbi könyvben:' + this.title + '?')
+    if (typeof previousPage === 'undefined') {
+      alert('Jelenleg az alábbi oldalon tartasz: ' + this.page + ' az alábbi könyvedben: ' + this.title + '.')
+    } else if (previousPage > this.page) {
+      alert('Legutóbb a ' + previousPage + '. oldalon hagytad abba az olvasást, most pedig a ' + this.page + ' oldalon tartasz? Valami itt nem kerek :)')
+    } else {
+      alert('Jelenleg az alábbi oldalon tartasz: ' + this.page + ' az alábbi könyvedben: ' + this.title + '. Legutóbb az alábbi oldalon tartottál: ' + previousPage + ', így ez alkalommal ' + (this.page - previousPage) + ' oldalt olvastál.')
+    }
+  }
+}
