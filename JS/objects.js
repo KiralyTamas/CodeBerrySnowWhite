@@ -77,6 +77,19 @@ let bookCatalog = {
       alert('Jelenleg az alábbi oldalon tartasz: ' + this[book].page + ' az alábbi könyvedben: ' + this[book].title + '. Legutóbb az alábbi oldalon tartottál: ' + previousPage + ', így ez alkalommal ' + (this[book].page - previousPage) + ' oldalt olvastál.')
     }
   },
+  'unread': function () {
+    let booksToRead = [];
+    for (let book in this) {
+      if (this[book]['has been read'] === false) {
+        booksToRead.push(this[book].title)
+      }
+    }
+    if (booksToRead.length === 0) {
+      console.log('Elolvastad az összes könyvedet.');
+    } else {
+      console.log('Nem olvastad még el az alábbi könyvet: ' + booksToRead)
+    }
+  },
   'myBook1': {
     'title': 'Ryan közlegény megmentése',
     'author': 'Harper Lee',
@@ -85,12 +98,12 @@ let bookCatalog = {
     'has been read': true,
     'main characters': ['Jean Louise Finch', 'Jeremy Finch', 'Atticus Finch'],
     'quotes': {
-      'p116': '"Atticus, you must be wrong..." "How\'s that?" "Well, most folks seem to think they\'re right and you\'re wrong..." "They\'re certainly entitled to think that, and they\'re entitled to full respect for their opinions," said Atticus, "but before I can live with other folks I\'ve got to live with myself. The one thing that doesn\'t abide by majority rule is a person\'s conscience."',
+      'p116': '"Atticus, you must be wrong..." "How\'s that?" "Well, most folks seem to think they\'re right and you\'re wrong..." "They\'re certainly entitled to think that, and they\'re entitled to full respect for their opinions," said Atticus, "but before I can live with other folks I\'ve got to live with myself. The one thing that doesn\'t abide by majority rule is a person\'s conscience.',
       'p124': 'I wanted you to see something about her—I wanted you to see what real courage is, instead of getting the idea that courage is a man with a gun in his hand. It\'s when you know you\'re licked before you begin but you begin anyway and you see it through no matter what. You rarely win, but sometimes you do.',
       'p309': '"An\' they chased him \'n\' never could catch him \'cause they didn\'t know what he looked like, an\' Atticus, when they finally saw him, why he hadn\'t done any of those things... Atticus, he was real nice..." His hands were under my chin, pulling up the cover, tucking it around me. "Most people are, Scout, when you finally see them."'
     },
     'borrowed by': null,
-    'rating': 5
+    'rating': 5,
   },
   'myBook2': {
     'title': 'Angyalok és Démonok',
@@ -121,11 +134,12 @@ let bookCatalog = {
     },
     'borrowed by': null,
     'rating': 5
-  }
+  },
 }
+
 let characters = {
-  'helloheroe':function (guy) {
-alert('Hello ' +this[guy]['first name']+this[guy]['last name']+'!')
+  'helloheroe': function (guy) {
+    alert('Hello ' + this[guy]['first name'] + this[guy]['last name'] + '!')
   },
   'character1': {
     'first name': 'James',
@@ -138,5 +152,5 @@ alert('Hello ' +this[guy]['first name']+this[guy]['last name']+'!')
   'character3': {
     'first name': 'Jason',
     'last name': 'Bourne'
-  }
-};
+  },
+}
