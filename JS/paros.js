@@ -8,7 +8,14 @@ function oddEven(num) {
     } else if (numbers % 5 == 0) {
       console.log(numbers + ' cica')
     } else {
-      console.log(numbers+' Egyikkel sem osztható')
+      console.log(numbers + ' Egyikkel sem osztható')
     }
+  }
+}
+const myObject = {
+  firstName: "Király",
+  lastName: "Tamás",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
   }
 }
