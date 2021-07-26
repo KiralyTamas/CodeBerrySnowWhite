@@ -12,10 +12,10 @@ function oddEven(num) {
     }
   }
 }
-const myObject = {
-  firstName: "Király",
-  lastName: "Tamás",
+let myObject = {
+  firstName: "Huszti",
+  lastName: "László",
   fullName: function () {
-    return this.firstName + " " + this.lastName;
+    document.getElementById("testWrite").innerHTML = this.firstName + " " + this.lastName;
   }
 }
