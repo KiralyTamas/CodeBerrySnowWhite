@@ -13,8 +13,8 @@ function oddEven(num) {
   }
 }
 let myObject = {
-  firstName: "Huszti",
-  lastName: "László",
+  firstName: "Király",
+  lastName: "Tamás",
   fullName: function () {
     document.getElementById("testWrite").innerHTML = this.firstName + " " + this.lastName;
   }
