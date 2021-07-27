@@ -13,9 +13,17 @@ function oddEven(num) {
   }
 }
 let myObject = {
-  firstName: "Király",
-  lastName: "Tamás",
+  firstName1: "Király",
+  lastName1: "Tamás",
+  firstName2: "Huszti",
+  lastName2: "László",
   fullName: function () {
-    document.getElementById("testWrite").innerHTML = this.firstName + " " + this.lastName;
+    if (document.getElementById("testWrite1") + document.getElementById("testWrite2")!= "") {
+      document.getElementById("testWrite1").innerHTML = "Nincs Név";
+      document.getElementById("testWrite2").innerHTML = "Nincs Név";
+    } else {
+      document.getElementById("testWrite1").innerHTML = this.firstName1 + " " + this.lastName1;
+      document.getElementById("testWrite2").innerHTML = this.firstName2 + " " + this.lastName2;
+    }
   }
 }
