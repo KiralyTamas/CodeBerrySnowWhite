@@ -18,12 +18,12 @@ let myObject = {
   firstName2: "Huszti",
   lastName2: "László",
   fullName: function () {
-    if (document.getElementById("testWrite1") == "") {
+    if (document.getElementById("testWrite1").innerHTML, document.getElementById("testWrite2").innerHTML == "") {
       document.getElementById("testWrite1").innerHTML = this.firstName1 + " " + this.lastName1;
       document.getElementById("testWrite2").innerHTML = this.firstName2 + " " + this.lastName2;
     } else {
-      document.getElementById("testWrite1").innerHTML = "Nincs Név!!";
-      document.getElementById("testWrite2").innerHTML = "Nincs Név!!";
+      document.getElementById("testWrite1").innerHTML = "Már van Név!!";
+      document.getElementById("testWrite2").innerHTML = "Már van Név!!";
     }
   }
 }
